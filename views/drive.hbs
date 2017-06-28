@@ -1,0 +1,39 @@
+{{!< layout}}
+{{ checkType mimeType}}
+<div class="drive" style="border: 1px #CCC solid; border-radius:5px; padding: 10px">
+
+    <div style="padding: 10px 0;">
+        <img src="{{iconUrl}}" alt="File Icon" style="width: 16px; height: 16px; vertical-align: middle">
+        <label style="display: inline-block; vertical-align: middle">{{filename}}</label>
+        <span class="aui-buttons" style="float: right">
+            <button class="aui-button"
+                    onclick="window.open('{{editUrl}}', '_blank');">
+                <span class="aui-icon aui-icon-small aui-iconfont-{{iconType}}">{{editBtnText}}</span>
+                {{editBtnText}}
+            </button>
+
+            <button class="aui-button drive-download" {{disabled}}>
+                <span class="aui-icon aui-icon-small aui-iconfont-devtools-clone"></span> Download
+            </button>
+
+            <button aria-controls="{{fileId}}" href="#{{fileId}}" aria-owns="{{fileId}}" aria-haspopup="true"
+               class="aui-button aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" data-dropdown2-alignment="left">
+                <span class="aui-icon aui-icon-small aui-iconfont-more">More</span>
+            </button>
+        </span>
+
+        <div aria-hidden="true" id="{{fileId}}" class="aui-dropdown2 aui-style-default">
+            <ul class="aui-list-truncate drive-download-list"></ul>
+        </div>
+
+    </div>
+    <iframe src="{{url}}" frameborder="0" height="{{height}}" width="{{width}}" class="drive-frame-holder" style="border: 1px solid #EEE"></iframe>
+</div>
+
+<script src="/js/download.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var fileId = "{{fileId}}";
+    var mimeType= "{{mimeType}}";
+    var filename= "{{filename}}";
+    loadDonwloadHelper(fileId, mimeType, filename);
+</script>

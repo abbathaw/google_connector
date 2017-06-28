@@ -1,0 +1,219 @@
+{{!< layout}}
+
+<div id="main-editor" class="editor-container">
+ <div id="editor" class="form">
+ <h2> Click on the button below to launch the picker and select your file </h2>
+  <div class="button-container">
+    <button id="launch-picker" class="aui-button aui-button-primary">Launch Picker</button>
+  </div>
+  
+   <form class="aui">
+    <div class="field-group">
+            <label for="d-fname">File/Folder Name Selected</label>
+            <input class="text long-field" type="text" id="fileName" name="fileName" disabled>
+    </div>
+
+    <div class="field-group">
+            <label for="d-fname">Height</label>
+            <input class="text short-field" type="text" id="height" name="height" value="600">
+            <div class="description">Customize height of the viewer(px)</div>
+    </div>
+    <div class="field-group">
+            <label for="d-fname">Width</label>
+            <input class="text short-field" type="text" id="width" name="width" value="100%">
+            <div class="description">Customize width of the viewer</div>
+    </div>
+    <div class="field-group">
+    <input class="text medium-field" type="hidden" id="mimeType" name="mimeType">
+    <input class="text medium-field" type="hidden" id="fileId" name="fileId">
+    <input class="text medium-field" type="hidden" id="editUrl" name="editUrl">
+    <input class="text medium-field" type="hidden" id="url" name="url">
+    <input class="text medium-field" type="hidden" id="iconUrl" name="iconUrl">
+    </div>
+    </form>
+ </div>
+
+ <div id="preview" >  </div>
+
+
+</div>
+
+
+
+
+<script src="/js/ac.js" type="text/javascript"></script>
+<script >
+var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
+  var connectUrl = baseUrl + '/atlassian-connect';
+  var head = document.getElementsByTagName("head")[0];
+
+	// HARDCODED API for now
+  // The Browser API key obtained from the Google Developers Console.
+  var developerKey = 'AIzaSyAaOur2hJZA7Ha00OSmy0IfdScrLUcNvYg';
+
+  // The Client ID obtained from the Google Developers Console. Replace with your own Client ID.
+  var clientId = "831481455021-5h0svgchmh9o5c7hdui5ra5ag2tirtk9.apps.googleusercontent.com"
+
+  // Scope to use to access user's photos.
+  var scope = ['https://www.googleapis.com/auth/drive'];
+
+
+  const gapiUrl = 'https://apis.google.com/js/api.js';
+  // const googleLoaderUrl = 'https://www.google.com/jsapi';
+  // const PICKER_API_VERSION = "1";
+
+	let url, editUrl, iconUrl, fileName, fileId, mimeType = '';
+  var oauthToken;
+  var macroDialog = null;
+
+  function loadGoogleApi(){
+    $.getScript(gapiUrl).done(() => {
+          onApiLoad();
+      });
+  }
+
+   // Use the API Loader script to load google.picker and gapi.auth.
+  function onApiLoad() {
+    gapi.load('auth', {'callback': onAuthApiLoad});
+    
+  }
+
+  function onAuthApiLoad() {
+    $("#launch-picker").prop('disabled', false);
+    $("#launch-picker").click(function(event) { 
+      
+      event.preventDefault();
+      window.gapi.auth.authorize(
+        {
+          'client_id': clientId,
+          'scope': scope,
+          'immediate': false
+        },
+        handleAuthResult);
+    });
+  }
+
+  function handleAuthResult(authResult) {
+    if (authResult && !authResult.error) {
+      oauthToken = authResult.access_token;
+      gapi.load('picker', {'callback': createPicker});
+    }
+  }
+
+  // Create and render a Picker object for picking user docs.
+  function createPicker() {
+    if (oauthToken) {
+      var view = new google.picker.DocsView(google.picker.ViewId.FOLDERS)
+                        .setSelectFolderEnabled(true);
+      var picker = new google.picker.PickerBuilder().
+          addView(google.picker.ViewId.DOCS).
+          addView(view).
+          setOAuthToken(oauthToken).
+          setDeveloperKey(developerKey).
+          setCallback(pickerCallback).
+          setOrigin(AC.getUrlParam('xdm_e', true)).
+          setSize(770, 800).
+          build();
+      picker.setVisible(true);
+
+      macroDialog.getButton("submit").disable();
+    }
+  }
+
+  function pickerCallback(data) {
+    var url = 'nothing';
+    if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED) {
+      var doc = data[google.picker.Response.DOCUMENTS][0];
+      url = doc[google.picker.Document.EMBEDDABLE_URL];
+      fileId = doc[google.picker.Document.ID];
+      fileName = doc[google.picker.Document.NAME];
+      mimeType = doc[google.picker.Document.MIME_TYPE];
+      editUrl = doc[google.picker.Document.URL];
+      iconUrl = doc[google.picker.Document.ICON_URL];
+
+      $('#fileId').val(fileId);
+      $('#fileName').val(fileName);
+      $('#mimeType').val(mimeType);
+      $('#editUrl').val(editUrl);
+      $('#iconUrl').val(iconUrl);
+      $('#url').val(url);
+
+      loadPreview(url);
+    }
+    if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED || data[google.picker.Response.ACTION] == google.picker.Action.CANCEL) {
+          macroDialog.getButton("submit").enable();
+        }
+  }  
+
+  function loadAtlassianApi() 
+  {
+    var script = document.createElement("script");
+    script.src = connectUrl + '/all.js';
+    script.setAttribute('data-options', 'resize:false;margin:false');
+
+    script.onload = function() 
+    {
+      AP.require([ "confluence", "dialog" ], function(confluence, dialog) 
+      {
+        function onSubmit() 
+        {
+          var macroParams = 
+          {
+            fileId : $('#fileId').val(),
+            fileName : $('#fileName').val(),
+            width : $('#width').val(),
+            height : $('#height').val(),
+            mimeType : $('#mimeType').val(),
+            iconUrl:$('#iconUrl').val(),
+            editUrl:$('#editUrl').val(),
+            url:$('#url').val(),
+          };
+          confluence.saveMacro(macroParams);
+          confluence.closeMacroEditor();
+          return true;
+        }
+        
+        confluence.getMacroData(function(macroParams) 
+        {
+          
+          if(macroParams != null && Object.keys(macroParams).length > 0) 
+            {
+              loadMacroParameters(macroParams);
+              loadPreview(macroParams.url);
+            }
+          });
+        loadGoogleApi();
+        macroDialog = dialog;
+        dialog.getButton("submit").bind(onSubmit);      
+      });
+    };
+    head.appendChild(script);
+  }
+  
+    
+  function loadMacroParameters(macroParams) 
+  {
+    $('#fileId').val(macroParams.fileId);    
+    $('#fileName').val(macroParams.fileName);
+    $('#width').val(macroParams.width);      
+    $('#height').val(macroParams.height);
+    $('#mimeType').val(macroParams.mimeType);
+    $('#iconUrl').val(macroParams.iconUrl);
+    $('#url').val(macroParams.url);
+    $('#editUrl').val(macroParams.editUrl);
+  }
+  
+  function loadPreview(url) 
+  {
+    $('#preview').empty();
+    var iframe = document.createElement('iframe');
+    iframe.src = url; 
+    iframe.width = '780px';
+    iframe.height = '100%';
+    $('#preview').append(iframe);
+  }
+  
+  loadAtlassianApi();
+
+
+</script>

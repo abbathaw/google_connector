@@ -1,0 +1,136 @@
+{
+    "key": "servicerocket-google-drive-connector-confluence",
+    "name": "Google Drive Connector for Confluence Connect",
+    "description": "Connect to Google Drive and take collaboration to the next level with ease",
+    "vendor": {
+        "name": "ServiceRocket",
+        "url": "https://docs.servicerocket.com/display/CFGDC"
+    },
+    "baseUrl": "{{localBaseUrl}}",
+    "links": {
+        "self": "{{localBaseUrl}}/atlassian-connect.json",
+        "homepage": "{{localBaseUrl}}/atlassian-connect.json"
+    },
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed"
+    },
+    "scopes": [
+        "READ", "WRITE"
+    ],
+    "modules": {
+        "dynamicContentMacros": [
+            {
+                "key": "google-drive-connector",
+                "name": {
+                    "value": "Google Drive Macro"
+                },
+                "url": "/google-drive?fileId={fileId}&fileName={fileName}&width={width}&height={height}&url={url}&editUrl={editUrl}&iconUrl={iconUrl}&mimeType={mimeType}",
+                "description": {
+                    "value": "Adds a google document to your page'."
+                },
+                "conditions": [{
+                    "condition": "user_is_logged_in"
+                }],
+                "outputType": "block",
+                "bodyType": "none",
+                "featured": true,
+                "categories": [
+                  "visuals",
+                  "external-content"
+                ],
+                "parameters": [{
+                    "identifier": "url",
+                    "name": {
+                      "value": "URL"
+                     },
+                    "description": {
+                      "value": "Google Drive file Embeddable Url"
+                    },
+                    "type": "string",
+                    "required": true,
+                    "hidden":true
+                 },
+                 {
+                    "identifier": "width",
+                    "name": {
+                      "value": "Width"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden": false
+                  },
+                  {
+                    "identifier": "height",
+                    "name": {
+                      "value": "Height"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden": false
+                  },
+                  {
+                    "identifier": "editUrl",
+                    "name": {
+                      "value": "Edit URL"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden":true
+                  },
+                  {
+                    "identifier": "fileName",
+                    "name": {
+                      "value": "File Name"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden":true
+                  },
+                  {
+                    "identifier": "fileId",
+                    "name": {
+                      "value": "File ID"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden": false
+                  },
+                  {
+                    "identifier": "mimeType",
+                    "name": {
+                      "value": "mime Type"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden":true
+                  },
+                  {
+                    "identifier": "iconUrl",
+                    "name": {
+                      "value": "Icon URL"
+                    },
+                    "type": "string",
+                    "required": false,
+                    "hidden":true
+                  }
+                ],
+                "editor": {
+                  "url":"/drive-picker?fileId={fileId}&fileName={fileName}&width={width}&height={height}&url={url}&editUrl={editUrl}&iconUrl={iconUrl}&mimeType={mimeType}",
+                  "editTitle": {
+                    "value": "Drive Picker"
+                  },
+                  "width": "800px",
+                  "height":"500px"
+                },
+                "icon": {
+                  "width": 16,
+                  "height":16,
+                  "url": "/images/drive-icon.png"
+                }
+            }
+          ]
+    }
+}
