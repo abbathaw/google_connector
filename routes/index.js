@@ -21,14 +21,14 @@ module.exports = function (app, addon) {
     app.get('/google-drive', addon.authenticate(), function (req, res) {
             // Rendering a template is easy; the `render()` method takes two params: name of template
             // and a json object to pass the context in
-            var url = req.param('url');
-            var width = req.param('width');
-            var height = req.param('height');
-            var iconUrl = req.param('iconUrl');
-            var editUrl = req.param('editUrl');
-            var filename = req.param('fileName');
-            var fileId = req.param('fileId');
-            var mimeType= req.param('mimeType');
+            var url = req.param("url");
+            var width = req.param("width");
+            var height = req.param("height");
+            var iconUrl = req.param("iconUrl");
+            var editUrl = req.param("editUrl");
+            var filename = req.param("fileName");
+            var fileId = req.param("fileId");
+            var mimeType= req.param("mimeType");
             res.render('drive', {
                 title: 'Google drive',
                 url, width, height, editUrl, iconUrl, filename, mimeType, fileId
