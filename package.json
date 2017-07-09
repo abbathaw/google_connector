@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "nightwatch"
   },
   "dependencies": {
     "atlassian-connect-express": "^2.1.0-0",
@@ -18,5 +19,9 @@
     "jugglingdb-sqlite3": "0.0.5",
     "morgan": "^1.6.1",
     "static-expiry": ">=0.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^3.4.2",
+    "nightwatch": "^0.9.16"
   }
 }

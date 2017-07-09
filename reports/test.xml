@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="test"
+    errors="1" failures="0" hostname="" id="" package="test" skipped="0"
+    tests="1" time="0.006000" timestamp="Sun, 09 Jul 2017 18:18:12 GMT">
+  
+    <testcase name="Google Drive test" classname="test" time="0.006000" assertions="0">
+    </testcase>
+  
+
+  
+    <system-err>
+        Error while running [Test / Google Drive test]:
+
+  ReferenceError: handle is not defined
+    at Object.Google Drive test (/home/it/connectProject/google_drive_cloud/tests/test.js:36:27)
+    at Module.call (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/lib/runner/module.js:62:34)
+    at /home/it/connectProject/google_drive_cloud/node_modules/nightwatch/lib/runner/testcase.js:70:29
+    at _fulfilled (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:834:54)
+    at self.promiseDispatch.done (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:863:30)
+    at Promise.promise.promiseDispatch (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:796:13)
+    at /home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:556:49
+    at runSingle (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:137:13)
+    at flush (/home/it/connectProject/google_drive_cloud/node_modules/nightwatch/node_modules/q/q.js:125:13)
+    at _combinedTickCallback (internal/process/next_tick.js:95:7)
+    </system-err>
+  
+
+  
+  </testsuite>
+</testsuites>
