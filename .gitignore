@@ -6,3 +6,5 @@ node_modules
 credentials.json
 store.db
 /testNightMare(not_used)/
+/selenium-debug.log
+/reports/
