@@ -3,21 +3,26 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon --inspect app.js",
     "test": "nightwatch"
   },
   "dependencies": {
     "atlassian-connect-express": "^2.1.0-0",
+    "axios": "^0.16.2",
+    "babel-cli": "^6.24.1",
     "body-parser": "^1.14.2",
     "compression": "^1.6.0",
     "cookie-parser": "^1.4.0",
     "cors": "^2.8.3",
+    "dotenv": "^4.0.0",
     "errorhandler": "^1.4.2",
     "express": "^4.13.3",
     "express-hbs": "*",
+    "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
     "jugglingdb-sqlite3": "0.0.5",
     "morgan": "^1.6.1",
+    "nodemon": "^1.11.0",
     "static-expiry": ">=0.0.5"
   },
   "devDependencies": {

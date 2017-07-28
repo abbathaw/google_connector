@@ -1,3 +1,6 @@
+const axios = require('axios');
+const {DEVELOPER_KEY, CLIENT_ID}= process.env;
+
 module.exports = function (app, addon) {
 
     // Root route. This route will serve the `atlassian-connect.json` unless the
@@ -19,28 +22,24 @@ module.exports = function (app, addon) {
     // This is an example route that's used by the default "generalPage" module.
     // Verify that the incoming request is authenticated with Atlassian Connect
     app.get('/google-drive', addon.authenticate(), function (req, res) {
-            // Rendering a template is easy; the `render()` method takes two params: name of template
-            // and a json object to pass the context in
-            var url = req.param("url");
-            var width = req.param("width");
-            var height = req.param("height");
-            var iconUrl = req.param("iconUrl");
-            var editUrl = req.param("editUrl");
-            var filename = req.param("fileName");
-            var fileId = req.param("fileId");
-            var mimeType= req.param("mimeType");
+
+        let {url, width, height, editUrl, iconUrl, fileName, mimeType, fileId}= req.query;
+
+            //
+            // let isPublic = await isPublic(editUrl);
+
             res.render('drive', {
                 title: 'Google drive',
-                url, width, height, editUrl, iconUrl, filename, mimeType, fileId
+                url, width, height, editUrl, iconUrl, fileName, mimeType, fileId
             });
         }
     );
 
-    // Add any additional route handlers you need for views or REST resources here...
     app.get('/drive-picker', addon.authenticate(), function (req, res) {
 
         res.render('editor', {
-            title: 'Editor'
+            title: 'Editor',
+            DEVELOPER_KEY, CLIENT_ID
         });
     });
 
@@ -62,4 +61,9 @@ module.exports = function (app, addon) {
             }
         }
     }
+
+    // async function isPublic(url) {
+    //    let res = await axios.get(url)
+    //     console.log("response", res);
+    // }
 };

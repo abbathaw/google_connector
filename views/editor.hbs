@@ -43,26 +43,24 @@
 
 <script src="/js/ac.js" type="text/javascript"></script>
 <script >
-var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
+  var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
   var connectUrl = baseUrl + '/atlassian-connect';
   var head = document.getElementsByTagName("head")[0];
 
-	// HARDCODED API for now
+
   // The Browser API key obtained from the Google Developers Console.
-  var developerKey = 'AIzaSyAaOur2hJZA7Ha00OSmy0IfdScrLUcNvYg';
+  var developerKey = "{{DEVELOPER_KEY}}";
 
   // The Client ID obtained from the Google Developers Console. Replace with your own Client ID.
-  var clientId = "831481455021-5h0svgchmh9o5c7hdui5ra5ag2tirtk9.apps.googleusercontent.com"
+  var clientId = "{{CLIENT_ID}}";
 
   // Scope to use to access user's photos.
   var scope = ['https://www.googleapis.com/auth/drive'];
 
 
   const gapiUrl = 'https://apis.google.com/js/api.js';
-  // const googleLoaderUrl = 'https://www.google.com/jsapi';
-  // const PICKER_API_VERSION = "1";
 
-	let url, editUrl, iconUrl, fileName, fileId, mimeType = '';
+  let url, editUrl, iconUrl, fileName, fileId, mimeType = '';
   var oauthToken;
   var macroDialog = null;
 
@@ -75,13 +73,13 @@ var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
    // Use the API Loader script to load google.picker and gapi.auth.
   function onApiLoad() {
     gapi.load('auth', {'callback': onAuthApiLoad});
-    
+
   }
 
   function onAuthApiLoad() {
     $("#launch-picker").prop('disabled', false);
-    $("#launch-picker").click(function(event) { 
-      
+    $("#launch-picker").click(function(event) {
+
       event.preventDefault();
       window.gapi.auth.authorize(
         {
@@ -143,21 +141,21 @@ var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
     if (data[google.picker.Response.ACTION] == google.picker.Action.PICKED || data[google.picker.Response.ACTION] == google.picker.Action.CANCEL) {
           macroDialog.getButton("submit").enable();
         }
-  }  
+  }
 
-  function loadAtlassianApi() 
+  function loadAtlassianApi()
   {
     var script = document.createElement("script");
     script.src = connectUrl + '/all.js';
     script.setAttribute('data-options', 'resize:false;margin:false');
 
-    script.onload = function() 
+    script.onload = function()
     {
-      AP.require([ "confluence", "dialog" ], function(confluence, dialog) 
+      AP.require([ "confluence", "dialog" ], function(confluence, dialog)
       {
-        function onSubmit() 
+        function onSubmit()
         {
-          var macroParams = 
+          var macroParams =
           {
             fileId : $('#fileId').val(),
             fileName : $('#fileName').val(),
@@ -172,11 +170,11 @@ var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
           confluence.closeMacroEditor();
           return true;
         }
-        
-        confluence.getMacroData(function(macroParams) 
+
+        confluence.getMacroData(function(macroParams)
         {
-          
-          if(macroParams != null && Object.keys(macroParams).length > 0) 
+
+          if(macroParams != null && Object.keys(macroParams).length > 0)
             {
               loadMacroParameters(macroParams);
               loadPreview(macroParams.url);
@@ -184,36 +182,35 @@ var baseUrl = AC.getUrlParam('xdm_e', true) + AC.getUrlParam('cp', true);
           });
         loadGoogleApi();
         macroDialog = dialog;
-        dialog.getButton("submit").bind(onSubmit);      
+        dialog.getButton("submit").bind(onSubmit);
       });
     };
     head.appendChild(script);
   }
-  
-    
-  function loadMacroParameters(macroParams) 
+
+
+  function loadMacroParameters(macroParams)
   {
-    $('#fileId').val(macroParams.fileId);    
+    $('#fileId').val(macroParams.fileId);
     $('#fileName').val(macroParams.fileName);
-    $('#width').val(macroParams.width);      
+    $('#width').val(macroParams.width);
     $('#height').val(macroParams.height);
     $('#mimeType').val(macroParams.mimeType);
     $('#iconUrl').val(macroParams.iconUrl);
     $('#url').val(macroParams.url);
     $('#editUrl').val(macroParams.editUrl);
   }
-  
-  function loadPreview(url) 
+
+  function loadPreview(url)
   {
     $('#preview').empty();
     var iframe = document.createElement('iframe');
-    iframe.src = url; 
+    iframe.src = url;
     iframe.width = '780px';
     iframe.height = '100%';
     $('#preview').append(iframe);
   }
-  
-  loadAtlassianApi();
 
+  loadAtlassianApi();
 
 </script>
