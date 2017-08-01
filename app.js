@@ -59,7 +59,12 @@ app.use(expiry(app, {dir: staticDir, debug: devEnv}));
 // Add an hbs helper to fingerprint static resource urls
 hbs.registerHelper('furl', function(url){ return app.locals.furl(url); });
 hbs.registerHelper(handlebarsHelpers);
-
+hbs.registerHelper('ifCond', function(v1, v2, options) {
+    if(v1 === v2) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+});
 // Mount the static resource dir
 app.use(express.static(staticDir));
 
