@@ -17,7 +17,8 @@
             </button>
 
             <button aria-controls="{{fileId}}" href="#{{fileId}}" aria-owns="{{fileId}}" aria-haspopup="true"
-               class="aui-button aui-dropdown2-trigger aui-dropdown2-trigger-arrowless" data-dropdown2-alignment="left">
+                    class="aui-button aui-dropdown2-trigger aui-dropdown2-trigger-arrowless"
+                    data-dropdown2-alignment="left">
                 <span class="aui-icon aui-icon-small aui-iconfont-more">More</span>
             </button>
         </span>
@@ -27,13 +28,84 @@
         </div>
 
     </div>
-    <iframe src="{{url}}" frameborder="0" height="{{height}}" width="{{width}}" class="drive-frame-holder" style="border: 1px solid #EEE"></iframe>
+    <iframe src="{{url}}" frameborder="0" height="{{height}}" width="{{width}}" class="drive-frame-holder"
+            style="border: 1px solid #EEE"></iframe>
+
 </div>
 
 <script src="/js/download.js" type="text/javascript"></script>
+
 <script type="text/javascript">
     let fileId = "{{fileId}}";
-    let mimeType= "{{mimeType}}";
-    let filename= "{{fileName}}";
+    let mimeType = "{{mimeType}}";
+    let filename = "{{fileName}}";
     loadDonwloadHelper(fileId, mimeType, filename);
+</script>
+<script type="text/javascript">
+
+    const clientId = "{{CLIENT_ID}}";
+    const scope = 'https://www.googleapis.com/auth/drive';
+    const gapiUrl = 'https://apis.google.com/js/api.js';
+    let authorizeButton, UserStatus ;
+    let loadStatus = '{{loadStatus}}';
+
+    function loadGoogleApi() {
+        $.getScript(gapiUrl).done(() => {
+            onApiLoad();
+        });
+    }
+
+    function onApiLoad() {
+        gapi.load('auth2', initSigninV2);
+    }
+
+    let initSigninV2 = function () {
+        gapi.auth2.init({
+
+            clientId: clientId,
+            scope: scope
+        }).then(function () {
+            // Listen for sign-in state changes.
+            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+            updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+
+            if (authorizeButton) {
+                authorizeButton.onclick = handleAuthClick;
+            }
+
+        });
+    };
+
+    function updateSigninStatus(isSignedIn) {
+        if (isSignedIn) {
+            userStatus = true;
+            const hasSignInMessage = $('.sign-in-message').length > 0;
+            if (hasSignInMessage) {
+                location.reload()
+            }
+        } else {
+            userStatus = false;
+            doLogic();
+        }
+    }
+
+    function doLogic() {
+        if (loadStatus === 'DENY' && userStatus === false) {
+            loadiframe();
+        }
+    }
+
+    function loadiframe(){
+        let source = $('.drive').empty();
+        source.append("<div class='sign-in-message aui-message aui-message-warning'><p class='title'><strong>Please sign in to your Google Account.</strong></p><p>You have to sign in to view Google Drive document.</p><p><button id='authorize-button' class='aui-button aui-button-primary sign-in-btn'>Sign In</button></p></div>");
+        authorizeButton = document.getElementById('authorize-button');
+    }
+
+
+    function handleAuthClick(event) {
+        gapi.auth2.getAuthInstance().signIn();
+    }
+    loadGoogleApi();
+
+
 </script>

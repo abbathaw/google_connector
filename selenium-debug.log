@@ -1,167 +1,167 @@
-01:26:48.022 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
-01:26:48.023 INFO - Launching a standalone Selenium Server
-2017-07-29 01:26:48.040:INFO::main: Logging initialized @232ms to org.seleniumhq.jetty9.util.log.StdErrLog
-01:26:48.085 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+00:03:39.413 INFO - Selenium build info: version: '3.4.0', revision: 'unknown'
+00:03:39.413 INFO - Launching a standalone Selenium Server
+2017-08-03 00:03:39.432:INFO::main: Logging initialized @235ms to org.seleniumhq.jetty9.util.log.StdErrLog
+00:03:39.477 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
  registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform LINUX
-01:26:48.085 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+00:03:39.477 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
  registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform LINUX
-01:26:48.085 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-01:26:48.085 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
+00:03:39.478 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+00:03:39.478 INFO - Driver provider com.opera.core.systems.OperaDriver registration is skipped:
 Unable to create new instances on this machine.
-01:26:48.085 INFO - Driver class not found: com.opera.core.systems.OperaDriver
-01:26:48.086 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
-01:26:48.086 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
+00:03:39.478 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+00:03:39.478 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+00:03:39.479 INFO - Driver provider org.openqa.selenium.safari.SafariDriver registration is skipped:
  registration capabilities Capabilities [{browserName=safari, version=, platform=MAC}] does not match the current platform LINUX
-2017-07-29 01:26:48.121:INFO:osjs.Server:main: jetty-9.4.3.v20170317
-2017-07-29 01:26:48.152:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@475530b9{/,null,AVAILABLE}
-2017-07-29 01:26:48.164:INFO:osjs.AbstractConnector:main: Started ServerConnector@548e7350{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
-2017-07-29 01:26:48.164:INFO:osjs.Server:main: Started @356ms
-01:26:48.164 INFO - Selenium Server is up and running
-01:26:48.363 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
-01:26:48.385 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]])
-01:26:48.404 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]
-1501262808741	geckodriver	INFO	Listening on 127.0.0.1:3814
-1501262808917	geckodriver::marionette	INFO	Starting browser /usr/lib/firefox/firefox with args ["-marionette"]
-1501262811366	Marionette	INFO	Listening on port 45120
-01:26:51.537 INFO - Detected dialect: W3C
-01:26:51.558 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]]
-01:26:51.593 INFO - Executing: [get: https://abba22.atlassian.net/wiki/display/])
-01:26:56.338 INFO - Done: [get: https://abba22.atlassian.net/wiki/display/]
-01:26:56.344 INFO - Executing: [find elements: By.cssSelector: body])
-01:26:56.370 INFO - Done: [find elements: By.cssSelector: body]
-01:26:56.375 INFO - Executing: [is displayed: 0 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]])
-01:26:56.424 INFO - Done: [is displayed: 0 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]]
-01:26:56.429 INFO - Executing: [find element: By.cssSelector: input#username])
-01:26:56.436 INFO - Done: [find element: By.cssSelector: input#username]
-01:26:56.442 INFO - Executing: [send keys: 1 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#username], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]])
-01:26:56.497 INFO - Done: [send keys: 1 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#username], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]]
-01:26:56.500 INFO - Executing: [find element: By.cssSelector: #login-submit])
-01:26:56.506 INFO - Done: [find element: By.cssSelector: #login-submit]
-01:26:56.510 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #login-submit]])
-01:26:56.754 INFO - Done: [click: 2 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #login-submit]]
-01:26:56.758 INFO - Executing: [find elements: By.cssSelector: input#password])
-01:26:56.767 INFO - Done: [find elements: By.cssSelector: input#password]
-01:26:56.770 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]])
-01:26:56.808 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]]
-01:26:57.313 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]])
-01:26:57.351 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]]
-01:26:57.854 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]])
-01:26:57.888 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password]]
-01:26:57.894 INFO - Executing: [find element: By.cssSelector: input#password])
-01:26:57.901 INFO - Done: [find element: By.cssSelector: input#password]
-01:26:57.904 INFO - Executing: [send keys: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password], [t, e, s, t, u, s, e, r]])
-01:26:57.936 INFO - Done: [send keys: 3 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#password], [t, e, s, t, u, s, e, r]]
-01:26:57.939 INFO - Executing: [find element: By.cssSelector: button#login-submit])
-01:26:57.944 INFO - Done: [find element: By.cssSelector: button#login-submit]
-01:26:57.949 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #login-submit]])
-01:27:00.073 INFO - Done: [click: 2 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #login-submit]]
-01:27:00.077 INFO - Executing: [find elements: By.cssSelector: body])
-01:27:00.144 INFO - Done: [find elements: By.cssSelector: body]
-01:27:00.148 INFO - Executing: [is displayed: 4 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]])
-01:27:00.196 INFO - Done: [is displayed: 4 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]]
-01:27:00.198 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:00.206 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:00.709 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:00.716 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:01.224 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:01.231 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:01.735 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:01.741 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:02.245 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:02.250 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:02.754 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:02.760 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:03.263 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:03.269 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:03.773 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:03.780 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:04.284 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:04.295 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:04.798 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:04.806 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:05.310 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:05.315 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:05.820 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
-01:27:06.083 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
-01:27:06.085 INFO - Executing: [is displayed: 5 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #quick-create-page-button]])
-01:27:06.474 INFO - Done: [is displayed: 5 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #quick-create-page-button]]
-01:27:11.480 INFO - Executing: [find element: By.cssSelector: #quick-create-page-button])
-01:27:11.496 INFO - Done: [find element: By.cssSelector: #quick-create-page-button]
-01:27:11.498 INFO - Executing: [click: 5 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #quick-create-page-button]])
-01:27:15.135 INFO - Done: [click: 5 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #quick-create-page-button]]
-01:27:15.138 INFO - Executing: [find elements: By.cssSelector: body])
-01:27:15.190 INFO - Done: [find elements: By.cssSelector: body]
-01:27:15.193 INFO - Executing: [is displayed: 6 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]])
-01:27:15.235 INFO - Done: [is displayed: 6 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]]
-01:27:15.238 INFO - Executing: [find element: By.cssSelector: input#content-title])
-01:27:15.244 INFO - Done: [find element: By.cssSelector: input#content-title]
-01:27:15.248 INFO - Executing: [send keys: 7 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#content-title], [4, 9, 3, 0, 1, 5, 0, 0, 6, 4, 3, 5, 2, 1, 3, 2, 3]])
-01:27:15.339 INFO - Done: [send keys: 7 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#content-title], [4, 9, 3, 0, 1, 5, 0, 0, 6, 4, 3, 5, 2, 1, 3, 2, 3]]
-01:27:15.344 INFO - Executing: [find element: By.cssSelector: body])
-01:27:15.402 INFO - Done: [find element: By.cssSelector: body]
-01:27:15.405 INFO - Executing: [click: 6 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]])
-01:27:15.664 INFO - Done: [click: 6 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: body]]
-01:27:18.672 INFO - Executing: [find element: By.cssSelector: #rte-button-insert])
-01:27:18.722 INFO - Done: [find element: By.cssSelector: #rte-button-insert]
-01:27:18.725 INFO - Executing: [click: 8 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #rte-button-insert]])
-01:27:18.970 INFO - Done: [click: 8 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #rte-button-insert]]
-01:27:18.973 INFO - Executing: [find element: By.cssSelector: #google-drive-connector])
-01:27:18.988 INFO - Done: [find element: By.cssSelector: #google-drive-connector]
-01:27:18.991 INFO - Executing: [click: 9 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #google-drive-connector]])
-01:27:19.620 INFO - Done: [click: 9 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #google-drive-connector]]
+2017-08-03 00:03:39.517:INFO:osjs.Server:main: jetty-9.4.3.v20170317
+2017-08-03 00:03:39.547:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@475530b9{/,null,AVAILABLE}
+2017-08-03 00:03:39.559:INFO:osjs.AbstractConnector:main: Started ServerConnector@548e7350{HTTP/1.1,[http/1.1]}{0.0.0.0:4444}
+2017-08-03 00:03:39.559:INFO:osjs.Server:main: Started @363ms
+00:03:39.560 INFO - Selenium Server is up and running
+00:03:39.758 INFO - SessionCleaner initialized with insideBrowserTimeout 0 and clientGoneTimeout 1800000 polling every 180000
+00:03:39.780 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]])
+00:03:39.799 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]
+1501689820110	geckodriver	INFO	Listening on 127.0.0.1:1980
+1501689820289	geckodriver::marionette	INFO	Starting browser /usr/lib/firefox/firefox with args ["-marionette"]
+1501689822007	Marionette	INFO	Listening on port 35806
+00:03:42.148 INFO - Detected dialect: W3C
+00:03:42.167 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, marionette=true, name=Test, browserName=firefox, javascriptEnabled=true, platform=ANY}]]
+00:03:42.200 INFO - Executing: [get: https://abba22.atlassian.net/wiki/display/])
+00:03:45.880 INFO - Done: [get: https://abba22.atlassian.net/wiki/display/]
+00:03:45.888 INFO - Executing: [find elements: By.cssSelector: body])
+00:03:45.918 INFO - Done: [find elements: By.cssSelector: body]
+00:03:45.923 INFO - Executing: [is displayed: 0 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]])
+00:03:45.977 INFO - Done: [is displayed: 0 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]]
+00:03:45.982 INFO - Executing: [find element: By.cssSelector: input#username])
+00:03:45.989 INFO - Done: [find element: By.cssSelector: input#username]
+00:03:45.994 INFO - Executing: [send keys: 1 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#username], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]])
+00:03:46.052 INFO - Done: [send keys: 1 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#username], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]]
+00:03:46.057 INFO - Executing: [find element: By.cssSelector: #login-submit])
+00:03:46.064 INFO - Done: [find element: By.cssSelector: #login-submit]
+00:03:46.067 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #login-submit]])
+00:03:46.312 INFO - Done: [click: 2 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #login-submit]]
+00:03:46.316 INFO - Executing: [find elements: By.cssSelector: input#password])
+00:03:46.326 INFO - Done: [find elements: By.cssSelector: input#password]
+00:03:46.330 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]])
+00:03:46.372 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]]
+00:03:46.876 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]])
+00:03:46.906 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]]
+00:03:47.410 INFO - Executing: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]])
+00:03:47.442 INFO - Done: [is displayed: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password]]
+00:03:47.446 INFO - Executing: [find element: By.cssSelector: input#password])
+00:03:47.456 INFO - Done: [find element: By.cssSelector: input#password]
+00:03:47.461 INFO - Executing: [send keys: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password], [t, e, s, t, u, s, e, r]])
+00:03:47.486 INFO - Done: [send keys: 3 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#password], [t, e, s, t, u, s, e, r]]
+00:03:47.492 INFO - Executing: [find element: By.cssSelector: button#login-submit])
+00:03:47.497 INFO - Done: [find element: By.cssSelector: button#login-submit]
+00:03:47.500 INFO - Executing: [click: 2 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #login-submit]])
+00:03:48.920 INFO - Done: [click: 2 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #login-submit]]
+00:03:48.925 INFO - Executing: [find elements: By.cssSelector: body])
+00:03:48.934 INFO - Done: [find elements: By.cssSelector: body]
+00:03:48.938 INFO - Executing: [is displayed: 4 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]])
+00:03:49.049 INFO - Done: [is displayed: 4 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]]
+00:03:49.053 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:49.073 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:49.579 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:49.585 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:50.090 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:50.096 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:50.601 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:50.610 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:51.113 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:51.121 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:51.626 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:51.645 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:52.148 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:52.160 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:52.664 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:52.670 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:53.173 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:53.179 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:53.683 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:53.692 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:54.196 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:54.202 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:54.706 INFO - Executing: [find elements: By.cssSelector: #quick-create-page-button])
+00:03:55.298 INFO - Done: [find elements: By.cssSelector: #quick-create-page-button]
+00:03:55.301 INFO - Executing: [is displayed: 5 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #quick-create-page-button]])
+00:03:55.442 INFO - Done: [is displayed: 5 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #quick-create-page-button]]
+00:04:00.447 INFO - Executing: [find element: By.cssSelector: #quick-create-page-button])
+00:04:00.456 INFO - Done: [find element: By.cssSelector: #quick-create-page-button]
+00:04:00.459 INFO - Executing: [click: 5 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #quick-create-page-button]])
+00:04:03.716 INFO - Done: [click: 5 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #quick-create-page-button]]
+00:04:03.721 INFO - Executing: [find elements: By.cssSelector: body])
+00:04:03.764 INFO - Done: [find elements: By.cssSelector: body]
+00:04:03.766 INFO - Executing: [is displayed: 6 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]])
+00:04:03.850 INFO - Done: [is displayed: 6 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]]
+00:04:03.853 INFO - Executing: [find element: By.cssSelector: input#content-title])
+00:04:03.863 INFO - Done: [find element: By.cssSelector: input#content-title]
+00:04:03.870 INFO - Executing: [send keys: 7 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#content-title], [7, 8, 5, 4, 9, 9, 0, 4, 1, 2, 3, 2, 2, 5, 3, 8]])
+00:04:04.079 INFO - Done: [send keys: 7 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#content-title], [7, 8, 5, 4, 9, 9, 0, 4, 1, 2, 3, 2, 2, 5, 3, 8]]
+00:04:04.082 INFO - Executing: [find element: By.cssSelector: body])
+00:04:04.097 INFO - Done: [find element: By.cssSelector: body]
+00:04:04.100 INFO - Executing: [click: 6 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]])
+00:04:04.354 INFO - Done: [click: 6 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: body]]
+00:04:07.362 INFO - Executing: [find element: By.cssSelector: #rte-button-insert])
+00:04:07.388 INFO - Done: [find element: By.cssSelector: #rte-button-insert]
+00:04:07.390 INFO - Executing: [click: 8 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #rte-button-insert]])
+00:04:07.637 INFO - Done: [click: 8 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #rte-button-insert]]
+00:04:07.640 INFO - Executing: [find element: By.cssSelector: #google-drive-connector])
+00:04:07.700 INFO - Done: [find element: By.cssSelector: #google-drive-connector]
+00:04:07.703 INFO - Executing: [click: 9 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #google-drive-connector]])
+00:04:08.242 INFO - Done: [click: 9 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #google-drive-connector]]
 JavaScript error: https://aui-cdn.atlassian.com/aui-adg/5.8.12/js/aui-experimental.js, line 2506: ReferenceError: define is not defined
-01:27:23.624 INFO - Executing: [switch to frame: 1])
-01:27:23.660 INFO - Done: [switch to frame: 1]
-01:27:26.668 INFO - Executing: [find elements: By.cssSelector: div#editor])
-01:27:26.674 INFO - Done: [find elements: By.cssSelector: div#editor]
-01:27:26.678 INFO - Executing: [find element: By.cssSelector: #launch-picker])
-01:27:26.685 INFO - Done: [find element: By.cssSelector: #launch-picker]
-01:27:26.688 INFO - Executing: [click: 11 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #launch-picker]])
-01:27:27.102 INFO - Done: [click: 11 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #launch-picker]]
-01:27:32.111 INFO - Executing: [get window handles])
-01:27:32.126 INFO - Done: [get window handles]
-01:27:32.132 INFO - Executing: [switch to window: 58])
-01:27:32.147 INFO - Done: [switch to window: 58]
-01:27:34.152 INFO - Executing: [find elements: By.cssSelector: div#view_container])
-01:27:34.163 INFO - Done: [find elements: By.cssSelector: div#view_container]
-01:27:34.168 INFO - Executing: [find element: By.cssSelector: input#identifierId])
-01:27:34.176 INFO - Done: [find element: By.cssSelector: input#identifierId]
-01:27:34.181 INFO - Executing: [send keys: 13 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#identifierId], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]])
-01:27:34.399 INFO - Done: [send keys: 13 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#identifierId], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]]
-01:27:34.403 INFO - Executing: [find element: By.cssSelector: input#identifierId])
-01:27:34.414 INFO - Done: [find element: By.cssSelector: input#identifierId]
-01:27:34.417 INFO - Executing: [send keys: 13 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#identifierId], []])
-01:27:34.488 INFO - Done: [send keys: 13 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input#identifierId], []]
-01:27:40.493 INFO - Executing: [find elements: By.cssSelector: div#password])
-01:27:40.504 INFO - Done: [find elements: By.cssSelector: div#password]
-01:27:40.507 INFO - Executing: [find element: By.cssSelector: input[name=password]])
-01:27:40.514 INFO - Done: [find element: By.cssSelector: input[name=password]]
-01:27:40.517 INFO - Executing: [send keys: 15 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input[name=password]], [d, r, K, 3, 7, s, j, F, Z, h, 7]])
-01:27:40.586 INFO - Done: [send keys: 15 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input[name=password]], [d, r, K, 3, 7, s, j, F, Z, h, 7]]
-01:27:40.590 INFO - Executing: [find element: By.cssSelector: input[name=password]])
-01:27:40.597 INFO - Done: [find element: By.cssSelector: input[name=password]]
-01:27:40.599 INFO - Executing: [send keys: 15 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input[name=password]], []])
-01:27:40.669 INFO - Done: [send keys: 15 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: input[name=password]], []]
-01:27:48.678 INFO - Executing: [get window handles])
-01:27:48.685 INFO - Done: [get window handles]
-01:27:48.688 INFO - Executing: [switch to window: 8])
-01:27:48.693 INFO - Done: [switch to window: 8]
-01:27:48.698 INFO - Executing: [find elements: By.cssSelector: div#editor])
-01:27:48.705 INFO - Done: [find elements: By.cssSelector: div#editor]
-01:27:48.708 INFO - Executing: [find elements: By.cssSelector: .picker-frame.picker-dialog-frame])
-01:27:48.715 INFO - Done: [find elements: By.cssSelector: .picker-frame.picker-dialog-frame]
-01:27:56.728 INFO - Executing: [find active element])
-01:27:56.735 INFO - Done: [find active element]
-01:27:56.739 INFO - Executing: [switch to frame: 2])
-01:27:56.746 INFO - Done: [switch to frame: 2]
-01:27:56.750 INFO - Executing: [switch to frame: 1])
-01:27:56.764 WARN - Exception thrown
+00:04:12.247 INFO - Executing: [switch to frame: 1])
+00:04:12.269 INFO - Done: [switch to frame: 1]
+00:04:15.274 INFO - Executing: [find elements: By.cssSelector: div#editor])
+00:04:15.315 INFO - Done: [find elements: By.cssSelector: div#editor]
+00:04:15.317 INFO - Executing: [find element: By.cssSelector: #launch-picker])
+00:04:15.333 INFO - Done: [find element: By.cssSelector: #launch-picker]
+00:04:15.336 INFO - Executing: [click: 11 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #launch-picker]])
+00:04:15.816 INFO - Done: [click: 11 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #launch-picker]]
+00:04:20.820 INFO - Executing: [get window handles])
+00:04:20.834 INFO - Done: [get window handles]
+00:04:20.839 INFO - Executing: [switch to window: 58])
+00:04:20.865 INFO - Done: [switch to window: 58]
+00:04:22.869 INFO - Executing: [find elements: By.cssSelector: div#view_container])
+00:04:22.885 INFO - Done: [find elements: By.cssSelector: div#view_container]
+00:04:22.895 INFO - Executing: [find element: By.cssSelector: input#identifierId])
+00:04:22.903 INFO - Done: [find element: By.cssSelector: input#identifierId]
+00:04:22.908 INFO - Executing: [send keys: 13 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#identifierId], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]])
+00:04:23.174 INFO - Done: [send keys: 13 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#identifierId], [s, f, o, r, c, e, ., r, k, t, 5, 4, @, g, m, a, i, l, ., c, o, m]]
+00:04:23.178 INFO - Executing: [find element: By.cssSelector: input#identifierId])
+00:04:23.198 INFO - Done: [find element: By.cssSelector: input#identifierId]
+00:04:23.201 INFO - Executing: [send keys: 13 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#identifierId], []])
+00:04:23.297 INFO - Done: [send keys: 13 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input#identifierId], []]
+00:04:29.306 INFO - Executing: [find elements: By.cssSelector: div#password])
+00:04:29.321 INFO - Done: [find elements: By.cssSelector: div#password]
+00:04:29.325 INFO - Executing: [find element: By.cssSelector: input[name=password]])
+00:04:29.335 INFO - Done: [find element: By.cssSelector: input[name=password]]
+00:04:29.339 INFO - Executing: [send keys: 15 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input[name=password]], [d, r, K, 3, 7, s, j, F, Z, h, 7]])
+00:04:29.447 INFO - Done: [send keys: 15 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input[name=password]], [d, r, K, 3, 7, s, j, F, Z, h, 7]]
+00:04:29.451 INFO - Executing: [find element: By.cssSelector: input[name=password]])
+00:04:29.464 INFO - Done: [find element: By.cssSelector: input[name=password]]
+00:04:29.468 INFO - Executing: [send keys: 15 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input[name=password]], []])
+00:04:29.560 INFO - Done: [send keys: 15 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: input[name=password]], []]
+00:04:37.570 INFO - Executing: [get window handles])
+00:04:37.581 INFO - Done: [get window handles]
+00:04:37.584 INFO - Executing: [switch to window: 8])
+00:04:37.598 INFO - Done: [switch to window: 8]
+00:04:37.601 INFO - Executing: [find elements: By.cssSelector: div#editor])
+00:04:37.617 INFO - Done: [find elements: By.cssSelector: div#editor]
+00:04:37.622 INFO - Executing: [find elements: By.cssSelector: .picker-frame.picker-dialog-frame])
+00:04:37.638 INFO - Done: [find elements: By.cssSelector: .picker-frame.picker-dialog-frame]
+00:04:45.646 INFO - Executing: [find active element])
+00:04:45.653 INFO - Done: [find active element]
+00:04:45.659 INFO - Executing: [switch to frame: 2])
+00:04:45.671 INFO - Done: [switch to frame: 2]
+00:04:45.676 INFO - Executing: [switch to frame: 1])
+00:04:45.698 WARN - Exception thrown
 org.openqa.selenium.NoSuchFrameException: Unable to locate frame: 1
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'it-Latitude-E7450', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-83-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/tmp/rust_mozprofile.6WeB0GEiVKHG, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=19101.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
-Session ID: 43b9e40a-4ba8-4ccc-ac62-5f6185c8e959
+Capabilities [{moz:profile=/tmp/rust_mozprofile.VkH55RwCImyP, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=7744.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
+Session ID: 43e7cc97-00e6-4c3b-a20a-bf5d18e7facc
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -181,36 +181,36 @@ Session ID: 43b9e40a-4ba8-4ccc-ac62-5f6185c8e959
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:748)
-01:27:56.766 WARN - Exception: Unable to locate frame: 1
+00:04:45.700 WARN - Exception: Unable to locate frame: 1
 Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
 System info: host: 'it-Latitude-E7450', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-83-generic', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{moz:profile=/tmp/rust_mozprofile.6WeB0GEiVKHG, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=19101.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
-Session ID: 43b9e40a-4ba8-4ccc-ac62-5f6185c8e959
-01:27:58.776 INFO - Executing: [find elements: By.cssSelector: div[data-target=doc]])
-01:27:58.788 INFO - Done: [find elements: By.cssSelector: div[data-target=doc]]
-01:27:58.792 INFO - Executing: [find element: By.cssSelector: div[data-target=doc]])
-01:27:58.798 INFO - Done: [find element: By.cssSelector: div[data-target=doc]]
-01:27:58.801 INFO - Executing: [click: 17 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: div[data-target=doc]]])
-01:27:59.066 INFO - Done: [click: 17 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: div[data-target=doc]]]
-01:28:02.072 INFO - Executing: [find elements: By.cssSelector: div[id^="picker:ap:0"]])
-01:28:02.080 INFO - Done: [find elements: By.cssSelector: div[id^="picker:ap:0"]]
-01:28:02.083 INFO - Executing: [find element: By.cssSelector: div[id^="picker:ap:0"]])
-01:28:02.090 INFO - Done: [find element: By.cssSelector: div[id^="picker:ap:0"]]
-01:28:02.093 INFO - Executing: [click: 18 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: div[id^="picker:ap:0"]]])
-01:28:02.355 INFO - Done: [click: 18 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: div[id^="picker:ap:0"]]]
-01:28:06.362 INFO - Executing: [switch to frame: default])
-01:28:06.369 INFO - Done: [switch to frame: default]
-01:28:07.373 INFO - Executing: [find element: By.cssSelector: #ap-button-0])
-01:28:07.407 INFO - Done: [find element: By.cssSelector: #ap-button-0]
-01:28:07.410 INFO - Executing: [click: 19 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #ap-button-0]])
-JavaScript error: https://d2vj1jlnoa5x8o.cloudfront.net/abba22.atlassian.net/wiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/-1264337195/h/c4674cb7862f9a9ea6ec50c4fa5302c3/_/download/contextbatch/js/editor,macro-browser,main,atl.general,page,-_super/batch.js?acjsFiveVersionEnabled=true&build-number=6452&confluence.table.resizable=true&externals=__local-default__&locale=en-GB, line 8738: Error: Failed to find an active dialog.
-01:28:07.646 INFO - Done: [click: 19 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #ap-button-0]]
-01:28:13.655 INFO - Executing: [find element: By.cssSelector: #rte-button-publish])
-01:28:13.662 INFO - Done: [find element: By.cssSelector: #rte-button-publish]
-01:28:13.665 INFO - Executing: [click: 20 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #rte-button-publish]])
-01:28:13.964 INFO - Done: [click: 20 [[FirefoxDriver: firefox on ANY (43b9e40a-4ba8-4ccc-ac62-5f6185c8e959)] -> css selector: #rte-button-publish]]
+Capabilities [{moz:profile=/tmp/rust_mozprofile.VkH55RwCImyP, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0, platformVersion=4.4.0-83-generic, moz:processID=7744.0, browserName=firefox, javascriptEnabled=true, platformName=linux}]
+Session ID: 43e7cc97-00e6-4c3b-a20a-bf5d18e7facc
+00:04:47.718 INFO - Executing: [find elements: By.cssSelector: div[data-target=doc]])
+00:04:47.733 INFO - Done: [find elements: By.cssSelector: div[data-target=doc]]
+00:04:47.737 INFO - Executing: [find element: By.cssSelector: div[data-target=doc]])
+00:04:47.748 INFO - Done: [find element: By.cssSelector: div[data-target=doc]]
+00:04:47.751 INFO - Executing: [click: 17 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: div[data-target=doc]]])
+00:04:48.029 INFO - Done: [click: 17 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: div[data-target=doc]]]
+00:04:51.036 INFO - Executing: [find elements: By.cssSelector: div[id^="picker:ap:0"]])
+00:04:51.052 INFO - Done: [find elements: By.cssSelector: div[id^="picker:ap:0"]]
+00:04:51.056 INFO - Executing: [find element: By.cssSelector: div[id^="picker:ap:0"]])
+00:04:51.067 INFO - Done: [find element: By.cssSelector: div[id^="picker:ap:0"]]
+00:04:51.071 INFO - Executing: [click: 18 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: div[id^="picker:ap:0"]]])
+00:04:51.329 INFO - Done: [click: 18 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: div[id^="picker:ap:0"]]]
+00:04:55.334 INFO - Executing: [switch to frame: default])
+00:04:55.342 INFO - Done: [switch to frame: default]
+00:04:56.345 INFO - Executing: [find element: By.cssSelector: #ap-button-0])
+00:04:56.358 INFO - Done: [find element: By.cssSelector: #ap-button-0]
+00:04:56.362 INFO - Executing: [click: 19 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #ap-button-0]])
+JavaScript error: https://d2vj1jlnoa5x8o.cloudfront.net/abba22.atlassian.net/wiki/s/d41d8cd98f00b204e9800998ecf8427e-CDN/1242339117/h/af012b176ba0302067caca9f43046c5f/_/download/contextbatch/js/editor,macro-browser,main,atl.general,page,-_super/batch.js?acjsFiveVersionEnabled=true&build-number=6452&confluence.table.resizable=true&externals=__local-default__&locale=en-GB, line 8810: Error: Failed to find an active dialog.
+00:04:56.616 INFO - Done: [click: 19 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #ap-button-0]]
+00:05:02.623 INFO - Executing: [find element: By.cssSelector: #rte-button-publish])
+00:05:02.653 INFO - Done: [find element: By.cssSelector: #rte-button-publish]
+00:05:02.655 INFO - Executing: [click: 20 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #rte-button-publish]])
+00:05:02.925 INFO - Done: [click: 20 [[FirefoxDriver: firefox on ANY (43e7cc97-00e6-4c3b-a20a-bf5d18e7facc)] -> css selector: #rte-button-publish]]
 JavaScript error: https://aui-cdn.atlassian.com/aui-adg/5.8.12/js/aui-experimental.js, line 2506: ReferenceError: define is not defined
-01:28:23.968 INFO - Executing: [delete session: c976ee07-b76e-4b77-ba52-5156d9e2ca97])
-1501262903971	Marionette	INFO	New connections will no longer be accepted
-01:28:24.230 INFO - Done: [delete session: c976ee07-b76e-4b77-ba52-5156d9e2ca97]
+00:05:12.934 INFO - Executing: [delete session: 8dc6d035-2ce5-41e6-bbdd-82e1a614dc6d])
+1501689912992	Marionette	INFO	New connections will no longer be accepted
+00:05:13.292 INFO - Done: [delete session: 8dc6d035-2ce5-41e6-bbdd-82e1a614dc6d]

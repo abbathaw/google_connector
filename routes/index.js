@@ -21,16 +21,14 @@ module.exports = function (app, addon) {
 
     // This is an example route that's used by the default "generalPage" module.
     // Verify that the incoming request is authenticated with Atlassian Connect
-    app.get('/google-drive', addon.authenticate(), function (req, res) {
+    app.get('/google-drive', addon.authenticate(), async function (req, res) {
 
-        let {url, width, height, editUrl, iconUrl, fileName, mimeType, fileId}= req.query;
-
-            //
-            // let isPublic = await isPublic(editUrl);
-
+            let {url, width, height, editUrl, iconUrl, fileName, mimeType, fileId} = req.query;
+            let fetchStatus = await getStatus(editUrl);
+            let loadStatus= fetchStatus.headers["x-frame-options"];
             res.render('drive', {
                 title: 'Google drive',
-                url, width, height, editUrl, iconUrl, fileName, mimeType, fileId
+                url, width, height, editUrl, iconUrl, fileName, mimeType, fileId, CLIENT_ID, loadStatus
             });
         }
     );
@@ -62,8 +60,7 @@ module.exports = function (app, addon) {
         }
     }
 
-    // async function isPublic(url) {
-    //    let res = await axios.get(url)
-    //     console.log("response", res);
-    // }
+    async function getStatus(editUrl) {
+        return await axios.get(editUrl)
+    }
 };
