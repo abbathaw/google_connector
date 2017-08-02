@@ -11,7 +11,6 @@ AC.getUrlParam = function(param, escape, url){
         return undefined;
     }
 };
-
 AC.getMetaTag = function(name) {
 	return document.getElementsByTagName('meta')[name].getAttribute('content');
 };

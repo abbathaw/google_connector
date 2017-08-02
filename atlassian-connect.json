@@ -50,7 +50,7 @@
                       "value": "Google Drive file Embeddable Url"
                     },
                     "type": "string",
-                    "required": true,
+                    "required": false,
                     "hidden":true
                  },
                  {

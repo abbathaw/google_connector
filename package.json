@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "nodemon --inspect app.js",
+    "start": "nodemon -e js,json,hbs app.js",
     "test": "nightwatch"
   },
   "dependencies": {
